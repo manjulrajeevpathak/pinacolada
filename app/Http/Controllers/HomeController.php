@@ -15,6 +15,7 @@ class HomeController extends QuintypeController
 
     public function index()
     {
+        echo "testing deployemnt";
         $page = ['type' => 'home'];
         $this->client->addBulkRequest('top_stories', 'top', ['fields' => $this->fields, 'limit' => 8]);
         $this->client->buildStacksRequest($this->allStacks, $this->fields);
